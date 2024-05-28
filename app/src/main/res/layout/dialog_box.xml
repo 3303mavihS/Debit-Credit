@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:maxLines="1"
+        android:hint="Enter Name"/>
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Amount"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/amount"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Reason"/>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Choose Category :"
+        app:layout_constraintTop_toBottomOf="@id/reason"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioOption1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/option_circle"
+            android:button="@drawable/check_box"/>
+
+        <RadioButton
+            android:id="@+id/radioOption2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/option_check"
+            android:button="@drawable/check_box"/>
+
+        <!-- Add more RadioButtons as needed -->
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        android:layout_marginTop="16dp"
+        android:text="Add To List"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/button_background"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
