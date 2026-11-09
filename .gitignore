@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Environment files - never commit secrets
+.env
+.env.*
+*.env
+!.env.example
